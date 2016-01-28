@@ -8,5 +8,5 @@ IMD Group 4
 Contributors
 - Sean Treanor
 - Carl Meehan
-- Daren Lynch
-- Garetha Greenaway
+- Darren Lynch
+- Gareth Greenaway
