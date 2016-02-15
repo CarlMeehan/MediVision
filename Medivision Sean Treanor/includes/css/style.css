@@ -1,0 +1,398 @@
+/* All CSS */
+
+body {
+    background: #eeeeee;
+}
+
+/* Carls CSS */
+
+#login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 2px solid #ddd;
+    padding: 20px;
+}
+
+#login-form input[type=text] {
+    margin-bottom: 20px;
+}
+
+#login-form input[type=email] {
+    margin-bottom: 20px;
+}
+
+#login-form input[type=password] {
+    margin-bottom: 20px;
+}
+
+#login-form input[type=file] {
+    margin-bottom: 20px;
+}
+
+#login-form .title {
+    font-size: 25px;
+    margin: 0px 0px 20px 0px;
+    padding: 0px;
+}
+
+/* Gareths CSS */
+
+/* Seans CSS */
+
+.main-content {
+    padding: 30px;
+    margin-top: 70px;
+}
+
+.navbar {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.navbar-default .nav {
+    margin-right: 0px;
+}
+
+.nav-top {
+    max-width: 150px !important;
+    float: right;
+}
+
+.navbar-default .nav-top li a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar-brand {
+    padding: 25px 15px;
+    height: 70px;
+    float: left;
+    margin-left: 0px !important;
+}
+
+.topstat {
+    background: white;
+    position: relative;
+    text-align: right;
+    height: 70px;
+    border: none;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+}
+
+.topstat .icon {
+    width: 100px;
+    padding: 21px 0;
+    text-align: center;
+    margin-right: 10px;
+    float: left;
+    overflow: hidden;
+    font-size: 20px;
+    color: #fff;
+}
+
+.topstat .value {
+    color: #000;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    padding-top: 15px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.topstat .title {
+    color: #c0cadd;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.panel {
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+    border-radius: none;
+    position: relative;
+    background: #fff;
+    border-radius: 0px !important;
+    border: 0px;
+    margin-bottom: 0px;
+}
+
+.panel-heading {
+    background: #5ca9ec;
+    color: #fff;
+    padding: 0px;
+    border-radius: 0px !important;
+}
+
+.panel-buttons {
+    padding: 20px 20px 20px 0px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.panel-buttons:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.panel-buttons:focus {
+    color: rgba(255, 255, 255, 1);
+}
+
+.panel-title {
+    padding: 20px;
+}
+
+.row {
+    margin-bottom: 30px;
+}
+
+.panel-heading .pull-left {
+    letter-spacing: 1px;
+}
+
+#schedules {
+      overflow: auto;
+      max-height: 300px;
+}
+
+#schedules table {
+      width: 100%;
+      font-size: 14px;
+}
+
+#schedules table td, #schedules table th {
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+}
+
+#contacts {
+      overflow: auto;
+      max-height: 300px;
+}
+
+#contacts table {
+      width: 100%;
+      font-size: 14px;
+}
+
+#contacts .image {
+      width: 70px;
+}
+
+#contacts .image img {
+      height: 50px;
+      width: 50px;
+}
+
+#contacts table td {
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+}
+
+#contacts table .search {
+      text-align: right;
+}
+
+#contacts table .search a {
+      background: #eee;
+      padding: 12px 13.8px;
+      color: #444;
+}
+
+#contacts table .search a:hover {
+      background: #ccc;
+}
+
+#reminders {
+      overflow: auto;
+      max-height: 300px;
+}
+
+#tasks table {
+      width: 100%;
+      font-size: 14px;
+}
+
+#tasks table td {
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+}
+
+#tasks table td i {
+      font-size: 20px;
+}
+
+#tasks table td .tick i {
+      padding: 10px 5px 10px 0px;
+}
+
+#tasks table td .trash i {
+  padding: 10px 10px 10px 5px;
+}
+
+#addTask textarea {
+    margin-top: 20px;
+}
+
+#navicon {
+    padding: 21px 25px;
+    font-size: 20px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    color: #ccc;
+    width: 70px;
+}
+
+#navicon:focus { background: #eee; }
+
+#navicon:hover {
+    padding: 21px 25px;
+    font-size: 20px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    background: #eeeeee;
+}
+
+
+
+.nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before {
+  display: inline !important;
+}
+
+.link:hover {
+  background: #eee !important;
+}
+
+#addSchedule {
+  background: #fff;
+  padding: 30px 30px 10px 30px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+}
+
+.addSchedule {
+  background: #fff;
+  margin-top: 30px;
+  padding: 30px 30px 30px 30px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+}
+
+.confirmationMsg {
+  background: #fff;
+  padding: 30px 30px 30px 30px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+}
+
+.confirmationMsg input {
+    margin-top: 20px;
+}
+
+#addSchedule select {
+  margin-bottom: 20px;
+}
+
+#addSchedule input[type=text] {
+  margin-bottom: 20px;
+}
+
+.dropdown-menu:before {
+  position: absolute;
+  top: -7px;
+  right: 9px;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-left: 7px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  content: '';
+}
+
+.dropdown-menu:after {
+  position: absolute;
+  top: -6px;
+  right: 10px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  border-left: 6px solid transparent;
+  content: '';
+}
+
+#addScheduleView {
+  width: 100%;
+  font-size: 14px;
+}
+
+#addScheduleView td, #addScheduleView th {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+#addTaskView {
+  width: 100%;
+  font-size: 14px;
+}
+
+#addTaskView td, #addTaskView th {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+#addTask {
+  background: #fff;
+  padding: 30px 30px 10px 30px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+}
+
+#profile {
+  background: #fff;
+  padding: 30px 30px 30px 30px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+}
+
+.sidenav {
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    position: absolute;
+    z-index: 20;
+    padding-top: 20px;
+    box-shadow: 0 0 4px rgba(0,0,0,.14),2px 4px 8px rgba(0,0,0,.28);
+    transition: 300ms ease-in-out;
+    margin-left: -255px;
+
+}
+
+.sidenav .nav li a:hover, .sidenav .nav li a:focus, .sidenav .nav li a:active {
+  background: #5ca9ec;
+    color: #fff;
+}
+
+.navmove {
+    margin-left: 0px;
+}
+
+.sidenav .nav a { color: #000; }
+
+@media (max-width: 768px) {
+  
+  .top { margin-top: 30px; }
+  
+}
+
+@media (max-width: 992px) {
+
+  .autofix { margin-top: 20px; }
+    
+}
