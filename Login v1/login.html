@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Medivision Login</title>
+  <!-- Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="css/custom.css" media="screen" />
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+    body {
+      background-image: url("https://static.pexels.com/photos/34844/pexels-photo.jpg");
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+    <div id="sucessfull" class="alert alert-success alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Success!</strong> Your Account Has Been Created
+</div>
+  <!--
+    you can substitue the span of reauth email for a input with the email and
+    include the remember me checkbox
+    -->
+  <div class="container">
+    <div class="card card-container">
+      <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+      <div class="logo"> <img width="40%" src="http://s11.postimg.org/ih2cj5ob7/medivision_logo.png">
+        <hr>
+        <p> Please Login To MediVision</p>
+      </div> <img id="profile-img" class="profile-img-card" src="http://americanmuslimconsumer.com/wp-content/uploads/2013/09/blank-user.jpg" />
+      <p id="profile-name" class="profile-name-card"></p>
+      <form class="form-signin"> <span id="reauth-email" class="reauth-email"></span>
+        <input type="email" id="inputEmail" class="form-control" placeholder="NHS Email Address" required autofocus>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+        <button data-toggle="modal" data-target=".bs-example-modal-lg" class="btn btn-lg btn-primary btn-block btn-signin" type="reset" href="#register">New User?</button>
+        <div id="register" class="collapse">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email"> </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password"> </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Remember me </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Sign in</button>
+              </div>
+            </div>
+        </div>
+        <hr>
+        <p style="font-size:8pt;text-align:center;"> Software Developed By MediVision.
+          <br> Copyright 2016 MediVision Ltd</p>
+      </form>
+      <!-- /form -->
+    </div>
+    <!-- /card-container -->
+    <!-- Modal Reigister -->
+    <!-- Large modal -->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+            <h4 class="modal-title" id="myModalLabel">Register New User</h4> </div>
+          <div class="modal-body">
+            <div style="max-width:500px;">
+                
+                
+                
+                
+                
+                
+              <!-- Start of Modal Content -->
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <form id="registerform" name="registerform" class="form-horizontal" action="javascript:void(0);" method="post">
+                      <fieldset>
+                        <!-- Text input-->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="authcode">Authorization Code</label>
+                          <div class="col-md-6">
+                            <input id="authcode" name="authcode" type="text" placeholder="Enter Code Here" class="form-control input-md" required="">
+                            <p style='margin-top: 10px;margin-right:0px;font-size:9pt;'> This will of been supplied by your network administrator during training.</p>
+                          </div>
+                        </div>
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="title">Title</label>
+                          <div class="col-md-6">
+                            <select id="title" name="title" class="form-control">
+                              <option value="Dr">Dr</option>
+                              <option value="Mr">Mr</option>
+                              <option value="Mrs">Mrs</option>
+                              <option value="Miss">Miss</option>
+                              <option value="Ms">Ms</option>
+                            </select>
+                          </div>
+                        </div>
+                        <!-- Text input-->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="fname">Forename</label>
+                          <div class="col-md-6">
+                            <input id="fname" name="fname" type="text" placeholder="E.g John" class="form-control input-md" required=""> </div>
+                        </div>
+                        <!-- Text input-->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="sname">Surname</label>
+                          <div class="col-md-6">
+                            <input id="sname" name="sname" type="text" placeholder="E.g Doe" class="form-control input-md" required=""> </div>
+                        </div>
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="dept">Department</label>
+                          <div class="col-md-6">
+                            <select id="dept" name="dept" class="form-control">
+                              <option value="Reception">Please Select</option>
+                              <option value="Doctors Office">Reception</option>
+                              <option value="First Aid Office">Doctors Office</option>
+                              <option value="Surgeon Office">First Aid Office</option>
+                              <option value="Medical Recovery Ward">Surgeon Office</option>
+                              <option value="Medical ICR Ward">Medical Recovery Ward</option>
+                              <option value="Medical Out Patients">Medical ICR Ward</option>
+                              <option value="Ground Ambulance">Medical Out Patients</option>
+                              <option value="Air Ambulance">Ground Ambulance</option>
+                              <option value="Motorcycle Ambulance">Air Ambulance</option>
+                              <option value="First Response Paramedic">Motorcycle Ambulance</option>
+                              <option value="First Response Doctor">First Response Paramedic</option>
+                              <option value="">First Response Doctor</option>
+                            </select>
+                          </div>
+                        </div>
+                        <!-- Text input-->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="email">NHS Email</label>
+                          <div class="col-md-6">
+                            <input id="email" name="email" type="email" placeholder="E.g johndoe@dhh.nhs.uk" class="form-control input-md" required=""> </div>
+                        </div>
+                        <!-- Text input-->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="fname">Password</label>
+                          <div class="col-md-6">
+                            <input id="password" pattern=".{12,}"   required title="12 characters minimum" name="password" type="password" placeholder="********" class="form-control input-md" required=""> </div>
+                        </div>
+                        <!-- Text input-->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="textinputdate">Start Date</label>
+                          <div class="col-md-6">
+                            <input id="start_date" name="start_date" type="text" placeholder="E.g 13/03/201" class="form-control input-md" required=""> </div>
+                        </div>
+                        <!-- Text input-->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="supervisor">Supervisors Email</label>
+                          <div class="col-md-6">
+                            <input id="sup_email" name="sup_email" type="email" placeholder="E.g janedoe@dhh.nhs.uk" class="form-control input-md" required=""> </div>
+                        </div>
+                      </fieldset>
+                   
+                    <hr width="1" size="500"> </div>
+                  <!-- Left / Right -->
+                  <div style="max-width:100px;" class="col-sm-4"></div>
+                  <h4> Upload Profile Picture</h4>
+                  <p style="margin:0;font-size:9pt;"> <i>Please Note: You <b> Must</b> include a profile picture in full uniform.</p></i>
+                    <hr style="max-width:350px;">
+                   <img id="blah" width=220px height=220px src="http://americanmuslimconsumer.com/wp-content/uploads/2013/09/blank-user.jpg" />
+                      <br>
+                      <br>
+                   
+                        <fieldset>
+                          <!-- File Button -->
+                          <div class="form-group">
+                            <div class="col-md-4">
+                              <input type='file' id="imgInp" /> </div>
+                          </div>
+                        </fieldset>
+                     
+                   
+                </div>
+              </div>
+            </div>
+            <!-- END of Modal Content -->
+          </div>
+          <div class="modal-footer">
+            <button type="reset" class="btn btn-default" data-dismiss="modal">Exit Form</button>
+              <button class="btn btn-default" id="registrationSubmitButton">Exit Form</button>
+          </div>
+        </form>
+
+        </div>
+      </div>
+    </div>
+    <!-- /container -->
+    <!-- Preview Image Upload -->
+    <script>
+      function readURL(input)
+      {
+        if (input.files && input.files[0])
+        {
+          var reader = new FileReader();
+          reader.onload = function(e)
+          {
+            $('#blah').attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+      $("#imgInp").change(function()
+      {
+        readURL(this);
+      });
+    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="application/javascript">
+        $(function() {
+            $("#registrationSubmitButton").click(function(){
+                
+                if($("[name='authcode']").val() == "" || $("[name='email']").val() == ""|| $("[name='fname']").val() == ""|| $("[name='sname']").val() == ""|| $("[name='password']").val() == ""|| $("[name='dept']").val() == ""|| $("[name='start_date']").val() == ""|| $("[name='sup_email']").val() == ""){
+                    return null;
+                }
+                
+                $.post("php/login.php", $("#registerform").serialize(),function(r){
+                    console.info(r);
+                }).fail(function(error){
+                    console.error(error);
+                    alert("Email Already In Use.");
+                });
+            });
+            
+        });
+
+
+    </script>
+  
+</body>
+
+</html>
