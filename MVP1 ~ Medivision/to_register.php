@@ -2,68 +2,70 @@
 
 session_start();
 
-if (isset($_SESSION['user']) != '') {
-    header('Location: home.php');
+if(isset($_SESSION['user'])!="") {
+					
+    header("Location: home.php");
+								
 }
 
 include_once 'dbconnect.php';
 
 if (isset($_POST['register'])) {
-  $username = mysql_real_escape_string($_POST['username']);
-
-  $email = mysql_real_escape_string($_POST['email']);
-
-  $password = md5(mysql_real_escape_string($_POST['password']));
-
-  $title = mysql_real_escape_string($_POST['title']);
-
-  $surname = mysql_real_escape_string($_POST['surname']);
-
-  $start_date = mysql_real_escape_string($_POST['start_date']);
-
-  $sup_email = mysql_real_escape_string($_POST['sup_email']);
-
-  $authcode = md5(mysql_real_escape_string($_POST['authcode']));
-
-  $image = "includes/img/account_logo.png";
-
-  $department = mysql_real_escape_string($_POST['department']);
-
-  $authorisation = "standard";
-
-  $query = "SELECT * FROM users WHERE email='$email'";
-
-  $result = mysql_query($query) or die(mysql_error());
-
-  if (mysql_num_rows($result)) {
-
-      ?> <script>alert("Username taken");</script> <?php
-
-  } else {
-
-      mysql_query("INSERT INTO users(username, email, password, image, authorisation, department, title, surname, , start_date, sup_email, authcode) VALUES('$username','$email','$password', '$image', '$authorisation','$department','$title','$surname','$start_date','$sup_email','$authcode')");
-
-      ?> <script>alert('Your account has now been registered, please visit the login page to sign in.');</script> <?php
-
-  }
-
+								
+    $username = mysql_real_escape_string($_POST['username']);
+        
+    $email = mysql_real_escape_string($_POST['email']);
+    
+    $password = md5(mysql_real_escape_string($_POST['password']));
+    
+    $title = mysql_real_escape_string($_POST['title']);
+    
+    $surname = mysql_real_escape_string($_POST['surname']);
+    
+    $start_date = mysql_real_escape_string($_POST['start_date']);
+    
+    $sup_email = mysql_real_escape_string($_POST['sup_email']);
+    
+    $authcode = md5(mysql_real_escape_string($_POST['authcode']));
+    
+    $image = "includes/img/account_logo.png";
+  
+    $department = mysql_real_escape_string($_POST['department']);
+    
+    $authorisation = "standard";
+								
+    $query = "SELECT * FROM users WHERE email='$email'";
+    
+    $result = mysql_query($query) or die(mysql_error());
+								
+    if (mysql_num_rows($result)) {
+									
+        ?> <script>alert("Username taken");</script> <?php
+												
+    } else {
+									
+        mysql_query("INSERT INTO users(username, email, password, image, authorisation, department, title, surname, , start_date, sup_email, authcode) VALUES('$username','$email','$password', '$image', '$authorisation','$department','$title','$surname','$start_date','$sup_email','$authcode',)");
+												
+        ?> <script>alert('Your account has now been registered, please visit the login page to sign in.');</script> <?php
+												
+    }
+								
 }
 
 ?>
-
 
 <!DOCTYPE html>
 
 <html>
 
     <head>
-
+	
         <title>Medivision</title>
-
+		
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-
+		
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+		
             <link rel="stylesheet" href="includes/css/style.css" />
 		       <link rel="stylesheet" type="text/css" href="includes/css/login.css" media="screen" />
   <style>
@@ -73,23 +75,23 @@ if (isset($_POST['register'])) {
     }
   </style>
     </head>
-
+	
     <body>
-
+        
         <!-- Carls register form here -->
 	<div style="margin-top:50px;" class="container">
                 <div class="row">
                    <div class="panel panel-default">
   <div class="panel-body">
-
+    
                       <h3> Register for Medivision</h3> <hr>
                   <div class="col-sm-8">
-
+                     
                     <form id="registerform" name="registerform" class="form-horizontal"  method="post">
                       <fieldset>
                         <!-- Text input-->
                         <div class="form-group">
-
+                    
                           <label class="col-md-4 control-label" for="authcode">Authorization Code</label>
                           <div class="col-md-6">
                             <input id="authcode" name="authcode" type="text" placeholder="Enter Code Here" class="form-control input-md" required="">
@@ -109,7 +111,7 @@ if (isset($_POST['register'])) {
                             </select>
                           </div>
                         </div>
-
+                        
                         <!-- Text input-->
                         <div class="form-group">
                           <label class="col-md-4 control-label" for="sname">Forename (Username)</label>
@@ -126,7 +128,7 @@ if (isset($_POST['register'])) {
                         <div class="form-group">
                           <label class="col-md-4 control-label" for="department">Department</label>
                           <div class="col-md-6">
-                            <select id="deptartment" name="department" class="form-control">
+                            <select id="dept" name="department" class="form-control">
                               <option value="Reception">Please Select</option>
                               <option value="Doctors Office">Reception</option>
                               <option value="First Aid Office">Doctors Office</option>
@@ -168,7 +170,7 @@ if (isset($_POST['register'])) {
                             <input id="sup_email" name="sup_email" type="email" placeholder="E.g janedoe@dhh.nhs.uk" class="form-control input-md" required=""> </div>
                         </div>
                       </fieldset>
-
+                   
                     <hr width="1" size="500"> </div>
                   <!-- Left / Right -->
                   <div class="col-sm-4">
@@ -178,7 +180,7 @@ if (isset($_POST['register'])) {
                    <img id="blah" width=220px height=220px src="http://americanmuslimconsumer.com/wp-content/uploads/2013/09/blank-user.jpg" />
                       <br>
                       <br>
-
+                   
                         <fieldset>
                           <!-- File Button -->
                           <div class="form-group">
@@ -188,22 +190,22 @@ if (isset($_POST['register'])) {
                         </fieldset>
       <div style="margin-left:auto; margin-top:40px; margin-right:auto;">
                      <button type="reset" class="btn btn-default">Reset Form</button>
-              <button class="btn btn-default" type="submit" name="register">Register</button>
-
+              <button class="btn btn-default" type="submit" name="register">Register</button> 
+          
                       </div>
       </div>
       </form>
-
+                   
                 </div>
               </div>
                        </div>
         </div>
-
-
+        
+		
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+					
     </body>
-
+	
 </html>
